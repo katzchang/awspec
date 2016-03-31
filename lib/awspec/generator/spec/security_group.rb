@@ -65,7 +65,7 @@ EOF
 
       def security_group_spec_template
         template = <<-'EOF'
-describe security_group('<%= sg.group_name %>') do
+describe security_group('<%= sg.group_id %>') do
   it { should exist }
 <% describes.each do |describe| %>
 <%- if sg.key?(describe) -%>
