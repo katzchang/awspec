@@ -23,7 +23,7 @@ describe cloudwatch_alarm('<%= alarm.alarm_name %>') do
   it { should have_insufficient_data_action('<%= action %>') }
 <%- end -%>
   it { should belong_to_metric('<%= alarm.metric_name %>').namespace('<%= alarm.namespace %>') }
-  its(:state_value) { should eq '<%= alarm.state_value %>' }
+#  its(:state_value) { should eq '<%= alarm.state_value %>' }
   its(:statistic) { should eq '<%= alarm.statistic %>' }
   its(:period) { should eq <%= alarm.period %> }
 #  its(:unit) { should eq '<%= alarm.unit %>' }
