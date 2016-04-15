@@ -10,6 +10,7 @@ require 'awspec/helper/finder/autoscaling'
 require 'awspec/helper/finder/ebs'
 require 'awspec/helper/finder/elb'
 require 'awspec/helper/finder/lambda'
+require 'awspec/helper/finder/kinesis'
 require 'awspec/helper/finder/iam'
 require 'awspec/helper/finder/elasticache'
 require 'awspec/helper/finder/cloudwatch'
@@ -30,6 +31,7 @@ module Awspec::Helper
     include Awspec::Helper::Finder::Ebs
     include Awspec::Helper::Finder::Elb
     include Awspec::Helper::Finder::Lambda
+    include Awspec::Helper::Finder::Kinesis
     include Awspec::Helper::Finder::Iam
     include Awspec::Helper::Finder::Elasticache
     include Awspec::Helper::Finder::Cloudwatch
@@ -45,6 +47,7 @@ module Awspec::Helper
       autoscaling_client: Aws::AutoScaling::Client,
       elb_client: Aws::ElasticLoadBalancing::Client,
       lambda_client: Aws::Lambda::Client,
+      kinesis_client: Aws::Kinesis::Client,
       iam_client: Aws::IAM::Client,
       elasticache_client: Aws::ElastiCache::Client,
       cloudwatch_client: Aws::CloudWatch::Client,

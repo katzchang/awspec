@@ -6,7 +6,7 @@ module Awspec
       TYPES = %w(
         ami autoscaling_group cloudwatch_alarm directconnect_virtual_interface
         ebs ec2 elasticache elasticache_cache_parameter_group elb iam_group
-        iam_policy iam_role iam_user lambda launch_configuration nat_gateway
+        iam_policy iam_role iam_user lambda kinesis launch_configuration nat_gateway
         network_acl network_interface rds rds_db_parameter_group route53_hosted_zone
         route_table s3_bucket security_group ses_identity subnet vpc
       )
